@@ -3,6 +3,7 @@
 ## Model Architecture
 LCASP-MMANet is built upon the YOLOv5 framework with two lightweight yet effective enhancements:
 - MMANet (Mixed Multimodal Aggregation Network)
+  
 -LCASP (Lightweight Channel-Aware Spatial Pyramid)
 
 

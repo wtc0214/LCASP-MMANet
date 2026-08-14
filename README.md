@@ -1,11 +1,9 @@
-# SLNet: An Efficient Real-Time Hand Gesture Detection Network Using Structured Convolution and Re-parameterized Large Kernels
+# LCASP-MMANet: A Lightweight Network with Pyramid and Multimodal Enhancements for Sign Language Recognition
 
 ## Model Architecture
-SLNet is built on YOLOv8 with the following improvements:
-- Lightweight backbone optimization
--Efficient convolution via DSConv
--Large kernel modeling via C2RepLK
--Stable feature refinement via LSKblock
+LCASP-MMANet is built upon the YOLOv5 framework with two lightweight yet effective enhancements:
+- MMANet (Mixed Multimodal Aggregation Network)
+-LCASP (Lightweight Channel-Aware Spatial Pyramid)
 
 
 ## Datasets

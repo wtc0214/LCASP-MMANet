@@ -1,38 +1,40 @@
+# LCASP-MMANet：一种结合金字塔结构与多模态增强的轻量级手语识别网络
 
-# SLNet：基于结构化卷积与重参数化大核的高效实时手语检测网络
+## 模型简介
+- **MMANet (混合多模态聚合网络，通过多分支特征提取结构融合不同语义信息)**
+  
+混合多模态聚合网络，通过多分支特征提取结构融合不同语义信息
 
-
-
-
-
-## 模型架构
-SLNet 基于 YOLOv8 构建，并进行了如下改进：
--轻量化骨干网络优化
--基于 DSConv 的高效卷积设计
--基于 C2RepLK 的大感受野建模
-基于 LSKblock 的稳定特征增强
-
+- **LCASP (轻量级通道感知空间金字塔模块)**
+- 
+  实现多尺度上下文建模与通道特征增强，提高复杂背景下的手势检测能力
 
 ## 数据集
 
-本项目在多个数据集上进行实验验证：
+本项目在四个公开手语数据集上进行了实验验证：
 
-1. ASL 手语数据集
+
+1. ASL Dataset (American Sign Language)
 
 🔗 https://universe.roboflow.com/meredith-lo-pmqx7/asl-project
 
-2. Expression 手势数据集
+2. Expression Dataset (Hand Gestures)
 
 🔗 https://universe.roboflow.com/expression/expressions-tgbkg
 
-3. 肾脏肿瘤数据集（泛化验证）
+3. ISL Dataset (Indian Sign Language)
 
-🔗 https://universe.roboflow.com/tezskb/kidney-tumor-uqpis
+🔗 https://universe.roboflow.com/yolov5-aqy9y/isl-using-yolov5/dataset/5
+
+
+4. FSL Dataset (Filipino Sign Language)
+
+🔗 https://universe.roboflow.com/ml-zggbn/fsl-ij1r8/dataset/1
 
 
 
 ### 3. Install Dependencies
-(环境安装推荐直接使用已配置好的 YOLOv8 或 YOLOv11 环境，无需重复安装）
+(环境安装推荐直接使用已配置好的 YOLOv5 或 YOLOv8 环境，无需重复安装）
 ```bash
 # Step 1.Create a virtual environment with conda
 conda create -n pt121_py38 python=3.8
@@ -91,3 +93,4 @@ python train.py --data your_dataset_config.yaml
 ```bash
 python val.py
 ```
+

@@ -26,18 +26,15 @@ The experiments are conducted on multiple datasets:
 
 🔗 https://universe.roboflow.com/yolov5-aqy9y/isl-using-yolov5/dataset/5
 
-Used to assess the robustness and generalization capability of the proposed model on Indian Sign Language recognition tasks.
 
 4. FSL Dataset (Filipino Sign Language)
 
 🔗 https://universe.roboflow.com/ml-zggbn/fsl-ij1r8/dataset/1
 
-Used to evaluate cross-lingual sign language recognition performance and complex gesture variations.
-
 
 
 ### 3. Install Dependencies
-(It is recommended to directly use the YOLOv11 or YOLOv8 environment that has already been set up on this computer, without the need to download again.)
+(It is recommended to directly use the YOLOv5 or YOLOv8 environment that has already been set up on this computer, without the need to download again.)
 ```bash
 # Step 1.Create a virtual environment with conda
 conda create -n pt121_py38 python=3.8
@@ -73,7 +70,13 @@ pip install -r requirements.txt
 
 ### 4. Run the Program
 ```bash
-python train.py --data your_dataset_config.yaml
+python train.py --data data/data.yaml
+Example Dataset Configurations
+python train.py --data data/asl.yaml
+python train.py --data data/isl.yaml
+python train.py --data data/fsl.yaml
+python train.py --data data/expression.yaml
+
 ```
 #### Explanation of Training Modes
 
@@ -81,7 +84,7 @@ Below are the Python script files for different training modes included in the p
 
 4.1. **`train.py`**
    - Basic training script.
-   - Used for standard training processes, suitable for general image classification or detection tasks.
+   - Used for training LCASP-MMANet on all supported datasets.
 
 2. **`train-rtdetr.py`**
    - Training script for RTDETR (Real-Time Detection Transformer).

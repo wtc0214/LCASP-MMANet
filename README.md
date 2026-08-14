@@ -9,20 +9,12 @@
   
  Improves multiscale feature learning using parallel spatial pyramid pooling and Efficient Channel Attention (ECA), enabling robust gesture localization under complex backgrounds.
 
-- **Key Features**
-Lightweight network design
-Multimodal feature aggregation
-Enhanced multiscale representation
-Channel-aware feature refinement
-Strong cross-dataset generalization capability
-Suitable for real-world sign language recognition scenarios
-
 
 ## Datasets
 
 The experiments are conducted on multiple datasets:
 
-1. ASL Dataset (Sign Language)
+1. ASL Dataset (American Sign Language)
 
 🔗 https://universe.roboflow.com/meredith-lo-pmqx7/asl-project
 
@@ -30,9 +22,17 @@ The experiments are conducted on multiple datasets:
 
 🔗 https://universe.roboflow.com/expression/expressions-tgbkg
 
-3. Kidney Tumor Dataset (Generalization)
+3. ISL Dataset (Indian Sign Language)
 
-🔗 https://universe.roboflow.com/tezskb/kidney-tumor-uqpis
+🔗 https://universe.roboflow.com/yolov5-aqy9y/isl-using-yolov5/dataset/5
+
+Used to assess the robustness and generalization capability of the proposed model on Indian Sign Language recognition tasks.
+
+4. FSL Dataset (Filipino Sign Language)
+
+🔗 https://universe.roboflow.com/ml-zggbn/fsl-ij1r8/dataset/1
+
+Used to evaluate cross-lingual sign language recognition performance and complex gesture variations.
 
 
 

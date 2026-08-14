@@ -1,33 +1,38 @@
-# SLNet: An Efficient Real-Time Hand Gesture Detection Network Using Structured Convolution and Re-parameterized Large Kernels
 
-## Model Architecture
-SLNet is built on YOLOv8 with the following improvements:
-- Lightweight backbone optimization
--Efficient convolution via DSConv
--Large kernel modeling via C2RepLK
--Stable feature refinement via LSKblock
+# SLNet：基于结构化卷积与重参数化大核的高效实时手语检测网络
 
 
-## Datasets
 
-The experiments are conducted on multiple datasets:
 
-1. ASL Dataset (Sign Language)
+
+## 模型架构
+SLNet 基于 YOLOv8 构建，并进行了如下改进：
+-轻量化骨干网络优化
+-基于 DSConv 的高效卷积设计
+-基于 C2RepLK 的大感受野建模
+基于 LSKblock 的稳定特征增强
+
+
+## 数据集
+
+本项目在多个数据集上进行实验验证：
+
+1. ASL 手语数据集
 
 🔗 https://universe.roboflow.com/meredith-lo-pmqx7/asl-project
 
-2. Expression Dataset (Hand Gestures)
+2. Expression 手势数据集
 
 🔗 https://universe.roboflow.com/expression/expressions-tgbkg
 
-3. Kidney Tumor Dataset (Generalization)
+3. 肾脏肿瘤数据集（泛化验证）
 
 🔗 https://universe.roboflow.com/tezskb/kidney-tumor-uqpis
 
 
 
 ### 3. Install Dependencies
-(It is recommended to directly use the YOLOv11 or YOLOv8 environment that has already been set up on this computer, without the need to download again.)
+(环境安装推荐直接使用已配置好的 YOLOv8 或 YOLOv11 环境，无需重复安装）
 ```bash
 # Step 1.Create a virtual environment with conda
 conda create -n pt121_py38 python=3.8
@@ -61,28 +66,28 @@ pip install -r requirements.txt
 ```
 
 
-### 4. Run the Program
+### 4. 运行训练
 ```bash
 python train.py --data your_dataset_config.yaml
 ```
-#### Explanation of Training Modes
+#### 训练脚本说明
 
-Below are the Python script files for different training modes included in the project, each targeting specific training needs and data types.
+本项目包含多个训练脚本，适用于不同任务：
 
 4.1. **`train.py`**
-   - Basic training script.
-   - Used for standard training processes, suitable for general image classification or detection tasks.
-
-2. **`train-rtdetr.py`**
-   - Training script for RTDETR (Real-Time Detection Transformer).
-
-3. **`train_Gray.py`**
-   - Grayscale image training script.
-   - Specifically for processing datasets of grayscale images, suitable for tasks requiring image analysis in grayscale space.
+  - 基础训练脚本，适用于通用目标检测任务
 
 
-### 5. Testing
-Run the test script to verify if the data loading is correct:
+4.2. **`train-rtdetr.py`**
+   - 用于 RT-DETR 模型的训练
+
+4.3. **`train_Gray.py`**
+   - 灰度图训练脚本，适用于单通道图像任务
+
+
+### 5.测试与验证
+
+运行以下命令进行模型验证：
 ```bash
 python val.py
 ```

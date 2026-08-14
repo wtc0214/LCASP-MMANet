@@ -1,10 +1,21 @@
 # LCASP-MMANet: A Lightweight Network with Pyramid and Multimodal Enhancements for Sign Language Recognition
 
 ## Model Architecture
-LCASP-MMANet is built upon the YOLOv5 framework with two lightweight yet effective enhancements:
-- MMANet (Mixed Multimodal Aggregation Network)
+- **MMANet (Mixed Multimodal Aggregation Network)**
   
--LCASP (Lightweight Channel-Aware Spatial Pyramid)
+ Enhances semantic representation through a multi-branch aggregation strategy, combining pointwise convolution, depthwise separable convolution, and identity mapping for efficient feature extraction.
+
+- **LCASP (Lightweight Channel-Aware Spatial Pyramid)**
+  
+ Improves multiscale feature learning using parallel spatial pyramid pooling and Efficient Channel Attention (ECA), enabling robust gesture localization under complex backgrounds.
+
+- **Key Features**
+Lightweight network design
+Multimodal feature aggregation
+Enhanced multiscale representation
+Channel-aware feature refinement
+Strong cross-dataset generalization capability
+Suitable for real-world sign language recognition scenarios
 
 
 ## Datasets
